@@ -5,6 +5,33 @@ module.exports = {
         output: {
             path: 'public/static/scripts',
             filename: 'main.js'
+        },
+        module: {
+            loaders: [
+                {
+                    test: /\.jsx$|\.js$/,
+                    loader: 'babel',
+                    include: [
+                        'assets/js',
+                        'components'
+                    ],
+                    query: {
+                        presets: ['react', 'es2015']
+                    }
+                },
+                {
+                    test: /\.scss$/,
+                    loaders: [
+                        'style',
+                        'css?modules&sourceMap',
+                        'sass'
+                    ],
+                    include: [
+                        'assets/sass',
+                        'components'
+                    ]
+                }
+            ]
         }
     }
 };

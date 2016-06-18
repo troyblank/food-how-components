@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+
+    &:before, &:after {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    padding-top: 50px;
+    background: $color-cream;
+    color: $color-brown;
+}
