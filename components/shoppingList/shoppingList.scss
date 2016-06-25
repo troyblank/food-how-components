@@ -1,0 +1,37 @@
+@import '../../assets/sass/base/base';
+
+.shopping-list {
+    max-width: 500px;
+    margin: 20px auto;
+
+    li {
+        position: relative;
+        max-width: 500px;
+        margin-bottom: 5px;
+        padding: 10px 5px 10px 35px;
+        background: $color-orange;
+        color: $color-cream;
+        list-style: none;
+        cursor: pointer;
+
+        &:after {
+            position: absolute;
+            top: 8px;
+            left: 5px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid $color-brown;
+            background: $color-cream;
+            content: '';
+        }
+    }
+
+    &.checked li {
+        background: $color-brown-50;
+        text-decoration: line-through;
+
+        &:after {
+            background-size: 80%;
+        }
+    }
+}
