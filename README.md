@@ -1,6 +1,7 @@
 # Food How Components
 
 [![Build Status](https://travis-ci.org/troyblank/food-how-components.svg?branch=master)](https://travis-ci.org/troyblank/food-how-components)
+[![Coverage Status](https://coveralls.io/repos/github/troyblank/food-how-components/badge.svg?branch=master)](https://coveralls.io/github/troyblank/food-how-components?branch=master)
 
 These are react componets for the Food How project. This also serves to demo and browser test the components.
 
