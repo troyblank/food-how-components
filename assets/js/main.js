@@ -10,7 +10,7 @@ ReactDOM.render(
     <h1>Food How Components</h1>
     <h2>Button</h2>
     <hr />
-    <Button />
+    <Button text={'I am button'} />
     <h2>Shopping List</h2>
     <hr />
     <ShoppingList />
