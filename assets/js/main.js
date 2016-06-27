@@ -13,7 +13,7 @@ ReactDOM.render(
     <Button text={'I am button'} />
     <h2>Shopping List</h2>
     <hr />
-    <ShoppingList />
-    <ShoppingList checked={true} />
+    <ShoppingList list={['stuff', 'and']} />
+    <ShoppingList list={['things']} checked={true} />
   </section>,
     document.querySelector('#main'));
