@@ -1,2 +1,3 @@
 export Button from './button/button';
-export ShoppingList from './shoppingList/shoppingList';
+export GetShoppingList from './shoppingList/getShoppingList';
+export GotShoppingList from './shoppingList/gotShoppingList';

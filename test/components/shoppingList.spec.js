@@ -3,7 +3,7 @@ import styles from '../helpers/style-fakes';
 import Chance from 'chance';
 import { assert } from 'chai';
 import { shallow } from 'enzyme';
-import { ShoppingList } from '../../components/index';
+import ShoppingList from '../../components/shoppingList/shoppingList';
 
 describe('Shopping List', () => {
     const chance = new Chance();

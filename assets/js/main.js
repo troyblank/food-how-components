@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import '../sass/global.scss';
 
-import { Button, ShoppingList } from '../../components/index';
+import { Button, GetShoppingList, GotShoppingList } from '../../components/index';
 
 ReactDOM.render(
   <section>
@@ -13,7 +13,7 @@ ReactDOM.render(
     <Button text={'I am button'} />
     <h2>Shopping List</h2>
     <hr />
-    <ShoppingList list={['stuff', 'and']} />
-    <ShoppingList list={['things']} checked={true} />
+    <GetShoppingList list={['stuff', 'and']} />
+    <GotShoppingList list={['things']} />
   </section>,
     document.querySelector('#main'));
