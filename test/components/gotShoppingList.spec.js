@@ -3,6 +3,7 @@ import Chance from 'chance';
 import { assert } from 'chai';
 import { shallow } from 'enzyme';
 import { GotShoppingList } from '../../components/index';
+import { IconX } from '../../components/icons';
 import ShoppingList from '../../components/shoppingList/shoppingList';
 
 describe('Got Shopping List', () => {
@@ -15,7 +16,7 @@ describe('Got Shopping List', () => {
         const wrapper = shallow(<GotShoppingList list={list} />);
 
         assert.isTrue(wrapper.contains(
-          <ShoppingList list={list} checked={true} />
+          <ShoppingList list={list} checked={true} icon={<IconX />} />
         ));
     });
 });
