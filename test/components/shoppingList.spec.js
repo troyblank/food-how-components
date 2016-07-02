@@ -4,6 +4,7 @@ import Chance from 'chance';
 import { assert } from 'chai';
 import { shallow } from 'enzyme';
 import ShoppingList from '../../components/shoppingList/shoppingList';
+import { IconX } from '../../components/icons';
 
 describe('Shopping List', () => {
     const chance = new Chance();
@@ -37,5 +38,14 @@ describe('Shopping List', () => {
 
         assert.equal(listItems.at(0).text(), listItem0);
         assert.equal(listItems.at(1).text(), listItem1);
+    });
+
+    it('should allow rendering of icons', () => {
+        const wrapper = shallow(<ShoppingList list={[listItem0, listItem1]} icon={<IconX />} />);
+        const listItem = wrapper.find('li').at(0);
+
+        assert.isTrue(listItem.contains(
+          <IconX />
+        ));
     });
 });

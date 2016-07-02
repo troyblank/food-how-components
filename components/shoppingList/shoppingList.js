@@ -2,13 +2,13 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './shoppingList.scss';
 
-export default function ShoppingList({ list, checked }) {
+export default function ShoppingList({ list, checked, icon }) {
     let i = 0;
     let listItems = [];
 
     if (list) {
         for (i; i < list.length; i++) {
-            listItems.push(<li key={i}>{list[i]}</li>);
+            listItems.push(<li key={i}>{icon}{list[i]}</li>);
         }
     }
 

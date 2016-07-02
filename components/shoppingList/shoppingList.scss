@@ -3,6 +3,7 @@
 .shopping-list {
     max-width: 500px;
     margin: 20px auto;
+    padding: 0;
 
     li {
         position: relative;
@@ -14,6 +15,13 @@
         list-style: none;
         cursor: pointer;
 
+        svg {
+            position: absolute;
+            top: 13px;
+            left: 10px;
+            z-index: 2;
+        }
+
         &:after {
             position: absolute;
             top: 8px;
@@ -23,6 +31,7 @@
             border: 2px solid $color-brown;
             background: $color-cream;
             content: '';
+            z-index: 1;
         }
     }
 
