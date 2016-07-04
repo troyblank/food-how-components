@@ -1,5 +1,5 @@
 {
-    "name": "food-how-components",
+    "name": "@troyblank/food-how-components",
     "version": "0.1.0",
     "description": "React components for food-how.",
     "repository": {
