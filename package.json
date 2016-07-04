@@ -1,17 +1,21 @@
 {
     "name": "@troyblank/food-how-components",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "React components for food-how.",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:troyblank/food-how-components.git"
     },
     "files": [
-        "components"
+        "components",
+        "assets/sass"
     ],
     "scripts": {
         "start": "grunt build && node server",
         "test": "grunt test"
+    },
+    "dependencies": {
+        "classnames": "2.2.5"
     },
     "devDependencies": {
         "@troyblank/eslint-config-troyblank": "0.4.0",
@@ -22,7 +26,6 @@
         "babel-preset-es2015": "6.9.0",
         "babel-preset-react": "6.5.0",
         "babel-preset-stage-0": "6.5.0",
-        "classnames": "2.2.5",
         "coveralls": "2.11.9",
         "css-loader": "0.23.1",
         "express": "4.13.4",
