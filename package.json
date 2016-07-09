@@ -1,6 +1,6 @@
 {
     "name": "@troyblank/food-how-components",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "description": "React components for food-how.",
     "repository": {
         "type": "git",
@@ -9,14 +9,12 @@
     "main": "lib/index.js",
     "files": [
         "assets/sass",
-        "components",
-        "grunt",
-        "Gruntfile.js"
+        "lib"
     ],
     "scripts": {
         "start": "grunt build && node server",
         "test": "grunt test",
-        "postinstall": "grunt dist"
+        "prepublish": "grunt dist"
     },
     "dependencies": {
         "classnames": "2.2.5"
