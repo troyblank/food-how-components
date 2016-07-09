@@ -1,18 +1,22 @@
 {
     "name": "@troyblank/food-how-components",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "React components for food-how.",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:troyblank/food-how-components.git"
     },
+    "main": "lib/index.js",
     "files": [
+        "assets/sass",
         "components",
-        "assets/sass"
+        "grunt",
+        "Gruntfile.js"
     ],
     "scripts": {
         "start": "grunt build && node server",
-        "test": "grunt test"
+        "test": "grunt test",
+        "postinstall": "grunt dist"
     },
     "dependencies": {
         "classnames": "2.2.5"
@@ -31,7 +35,9 @@
         "express": "4.13.4",
         "grunt": "1.0.1",
         "grunt-assemble": "0.4.0",
+        "grunt-babel": "6.0.0",
         "grunt-contrib-clean": "1.0.0",
+        "grunt-contrib-copy": "1.0.0",
         "grunt-contrib-watch": "1.0.0",
         "grunt-eslint": "18.1.0",
         "grunt-mocha-istanbul": "5.0.1",
