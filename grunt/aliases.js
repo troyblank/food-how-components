@@ -1,4 +1,8 @@
 module.exports = {
+    dist: [
+        'babel',
+        'copy'
+    ],
     build: [
         'clean',
         'webpack',
