@@ -1,5 +1,6 @@
 module.exports = {
     dist: [
+        'clean:dist',
         'babel',
         'copy'
     ],
