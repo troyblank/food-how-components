@@ -1,5 +1,8 @@
 module.exports = {
     main: {
-        src: ['public']
+        src: 'public'
+    },
+    dist: {
+        src: 'lib'
     }
 };
