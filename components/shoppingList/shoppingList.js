@@ -6,10 +6,12 @@ export default function ShoppingList({ list, checked, icon }) {
     let i = 0;
     let listItems = [];
 
-    if (list) {
-        for (i; i < list.length; i++) {
-            listItems.push(<li key={i}>{icon}{list[i]}</li>);
-        }
+    if (!list || 0 === list.length) {
+        return null;
+    }
+
+    for (i; i < list.length; i++) {
+        listItems.push(<li key={i}>{icon}{list[i]}</li>);
     }
 
     return (
