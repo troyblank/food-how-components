@@ -19,4 +19,11 @@ describe('Got Shopping List', () => {
           <ShoppingList list={list} checked={true} icon={<IconX />} />
         ));
     });
+
+    it('should not render a got shopping list with no data', () => {
+        const wrapper = shallow(<GotShoppingList list={[]} />);
+        const list = wrapper.find('ul');
+
+        assert.equal(list.length, 0);
+    });
 });

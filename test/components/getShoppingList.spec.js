@@ -18,4 +18,11 @@ describe('Get Shopping List', () => {
           <ShoppingList list={list} />
         ));
     });
+
+    it('should not render a get shopping list with no data', () => {
+        const wrapper = shallow(<GetShoppingList list={[]} />);
+        const list = wrapper.find('ul');
+
+        assert.equal(list.length, 0);
+    });
 });
