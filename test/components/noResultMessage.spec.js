@@ -20,4 +20,11 @@ describe('No Result Message', () => {
         assert.equal(header.text(), headline);
         assert.equal(paragraph.text(), message);
     });
+
+    it('should not render if there is no text', () => {
+        const wrapper = shallow(<NoResultMessage headline={''} message={''} />);
+        const divWrapper = wrapper.find('div');
+
+        assert.equal(divWrapper.length, 0);
+    });
 });
