@@ -1,8 +1,9 @@
 import React from 'react';
+import Ingredient from './ingredient';
 import classNames from 'classnames';
 import styles from './shoppingList.scss';
 
-export default function ShoppingList({ list, checked, icon }) {
+export default function ShoppingList({ list, checked, icon, ingredientClickHand }) {
     let i = 0;
     let listItems = [];
 
@@ -11,7 +12,9 @@ export default function ShoppingList({ list, checked, icon }) {
     }
 
     for (i; i < list.length; i++) {
-        listItems.push(<li key={i}>{icon}{list[i]}</li>);
+        const node = list[i];
+        const id = node.id;
+        listItems.push(<Ingredient key={id} id={id} ingredientClickHand={ingredientClickHand} icon={icon} name={node.name} />);
     }
 
     return (

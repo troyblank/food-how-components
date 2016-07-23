@@ -1,27 +1,33 @@
 import React from 'react';
 import styles from '../helpers/style-fakes';
 import Chance from 'chance';
+import sinon from 'sinon';
 import { assert } from 'chai';
 import { shallow } from 'enzyme';
 import ShoppingList from '../../components/shoppingList/shoppingList';
+import Ingredient from '../../components/shoppingList/ingredient';
 import { IconX } from '../../components/icons';
 
 describe('Shopping List', () => {
     const chance = new Chance();
-    const listItem0 = chance.word();
-    const listItem1 = chance.word();
+    const listItem0 = { name: chance.word(), id: chance.natural() };
+    const listItem1 = { name: chance.word(), id: chance.natural() };
     const data = [listItem0, listItem1];
+    const ingredientClickHand = sinon.spy();
 
     it('should render a shopping list', () => {
-        const wrapper = shallow(<ShoppingList list={data} />);
+        const wrapper = shallow(<ShoppingList list={data} ingredientClickHand={ingredientClickHand} icon={<IconX />} />);
 
-        const list = wrapper.find('ul');
-
-        assert.equal(list.length, 1);
+        assert.isTrue(wrapper.contains(
+          <ul className={styles['shopping-list']}>
+            <Ingredient id={listItem0.id} ingredientClickHand={ingredientClickHand} icon={<IconX />} name={listItem0.name} />
+            <Ingredient id={listItem1.id} ingredientClickHand={ingredientClickHand} icon={<IconX />} name={listItem1.name} />
+          </ul>
+        ));
     });
 
     it('should apply styles', () => {
-        const wrapper = shallow(<ShoppingList list={data} />);
+        const wrapper = shallow(<ShoppingList list={data} ingredientClickHand={ingredientClickHand} />);
         const list = wrapper.find('ul');
 
         assert.isTrue(list.hasClass(styles['shopping-list']));
@@ -35,26 +41,9 @@ describe('Shopping List', () => {
     });
 
     it('should apply checked styles when specified', () => {
-        const wrapper = shallow(<ShoppingList list={data} checked={true} />);
+        const wrapper = shallow(<ShoppingList list={data} checked={true} ingredientClickHand={ingredientClickHand} />);
         const list = wrapper.find('ul');
 
         assert.isTrue(list.hasClass(styles.checked));
-    });
-
-    it('should render list elements', () => {
-        const wrapper = shallow(<ShoppingList list={data} />);
-        const listItems = wrapper.find('li');
-
-        assert.equal(listItems.at(0).text(), listItem0);
-        assert.equal(listItems.at(1).text(), listItem1);
-    });
-
-    it('should allow rendering of icons', () => {
-        const wrapper = shallow(<ShoppingList list={data} icon={<IconX />} />);
-        const listItem = wrapper.find('li').at(0);
-
-        assert.isTrue(listItem.contains(
-          <IconX />
-        ));
     });
 });
