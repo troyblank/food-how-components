@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import '../sass/global.scss';
+import '../sass/style.scss';
 
 import {
     Button,
