@@ -1,0 +1,5 @@
+.typography {
+    h1 {
+        @extend %heading-primary;
+    }
+}
