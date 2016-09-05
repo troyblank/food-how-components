@@ -1,0 +1,28 @@
+@import '../../assets/sass/base/base';
+
+.input {
+    position: relative;
+
+    input {
+        border: 0;
+        border-bottom: 1px solid $color-brown;
+        background: transparent;
+        font-size: rem(16px);
+
+        &:focus + label,
+        &.used + label {
+            top: -20px;
+            font-size: rem(11px);
+        }
+    }
+
+    label {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        transition: .2s ease top, .2s ease padding, .2s ease font-size, .2s ease color;
+        font-size: rem(14px);
+        text-transform: uppercase;
+        pointer-events: none;
+    }
+}
