@@ -28,6 +28,7 @@ module.exports = {
                     ],
                     include: [
                         'assets/sass',
+                        'assets/js/prototypes',
                         'components'
                     ]
                 }

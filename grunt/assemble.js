@@ -8,7 +8,7 @@ module.exports = {
         cwd: 'views',
         src: [
             '*.hbs',
-            'templates/*.hbs'
+            'prototypes/*.hbs'
         ],
         dest: 'public'
     }

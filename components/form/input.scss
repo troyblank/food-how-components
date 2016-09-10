@@ -4,6 +4,8 @@
     position: relative;
 
     input {
+        width: 100%;
+        padding: 0 0 10px;
         border: 0;
         border-bottom: 1px solid $color-brown;
         background: transparent;
@@ -18,7 +20,7 @@
 
     label {
         position: absolute;
-        top: 6px;
+        top: 0;
         left: 0;
         transition: .2s ease top, .2s ease padding, .2s ease font-size, .2s ease color;
         font-size: rem(14px);

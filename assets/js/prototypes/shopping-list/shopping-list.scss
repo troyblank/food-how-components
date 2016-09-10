@@ -1,0 +1,19 @@
+@import '../../../sass/global';
+
+.shopping-list {
+    @extend %page-wrap;
+
+    h1,
+    p {
+        text-align: center;
+    }
+
+    button {
+        margin: 20px auto;
+    }
+}
+
+.input {
+    max-width: 500px;
+    margin: 0 auto;
+}
