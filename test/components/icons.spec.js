@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconX } from '../../components/icons';
+import { IconX, IconInputPlus } from '../../components/icons';
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
 
@@ -16,5 +16,11 @@ function assertIcon(component, title) {
 describe('IconX', () => {
     it('should render the x icon', () => {
         assertIcon(<IconX />, 'X Icon');
+    });
+});
+
+describe('IconInputPlus', () => {
+    it('should render the input plus icon', () => {
+        assertIcon(<IconInputPlus />, 'Plus Icon');
     });
 });
