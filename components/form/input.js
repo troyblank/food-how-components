@@ -35,6 +35,7 @@ export default class Input extends Component {
             <label htmlFor={id}>
               {label}
             </label>
+            <div className={styles.bar} />
           </div>
         );
     }
