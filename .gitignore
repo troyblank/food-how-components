@@ -3,6 +3,7 @@
 # NODE #
 #########
 node_modules
+npm-debug.log
 
 # OS generated files #
 ######################
@@ -14,6 +15,7 @@ node_modules
 ehthumbs.db
 Thumbs.db
 
+.sass-lint.yml
 coverage
 public
 lib
