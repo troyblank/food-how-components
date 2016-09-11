@@ -7,6 +7,7 @@ import {
     Button,
     GetShoppingList,
     GotShoppingList,
+    Input,
     NoResultMessage }
     from '../../components/index';
 import { IconX } from '../../components/icons';
@@ -32,6 +33,11 @@ renderHtml(
     <h2>Button</h2>
     <hr />
     <Button text={'I am button'} buttonClickHand={() => print('Button clicked.')} />
+
+    <hr />
+    <h2>Forms</h2>
+    <hr />
+    <Input label={'I am an input'} id={'addIngredient'} />
 
     <hr />
     <h2>Shopping List</h2>
