@@ -30,6 +30,7 @@ describe('Input', () => {
             <label htmlFor={id}>
               {label}
             </label>
+            <div className={styles.bar} />
           </div>
         ));
     });

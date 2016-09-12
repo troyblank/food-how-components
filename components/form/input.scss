@@ -16,6 +16,38 @@
             top: -20px;
             font-size: rem(11px);
         }
+
+        // bar
+        & ~ .bar {
+            position: absolute;
+            top: 29px;
+            width: 100%;
+
+            &::after,
+            &::before {
+                position: absolute;
+                width: 0;
+                height: 1px;
+                transition: .2s ease width;
+                background-color: $color-orange;
+                content: '';
+            }
+
+            &::before {
+                left: 50%;
+            }
+
+            &::after {
+                right: 50%;
+            }
+        }
+
+        &:focus ~ .bar {
+            &::after,
+            &::before {
+                width: 50%;
+            }
+        }
     }
 
     label {
