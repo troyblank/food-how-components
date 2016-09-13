@@ -9,7 +9,7 @@ import {
     GotShoppingList,
     NoResultMessage }
     from '../../components/index';
-import { IconX } from '../../components/icons';
+import { IconX, IconInputPlus } from '../../components/icons';
 
 renderHtml(
   <section>
@@ -47,7 +47,14 @@ renderHtml(
     <hr />
     <h2>Icons</h2>
     <hr />
-    <IconX />
+    <ul className={styles.icons}>
+      <li>
+        <IconX />
+      </li>
+      <li>
+        <IconInputPlus />
+      </li>
+    </ul>
   </section>,
     '#components'
 );
