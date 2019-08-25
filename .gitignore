@@ -18,4 +18,4 @@ Thumbs.db
 .sass-lint.yml
 coverage
 public
-lib
+dist

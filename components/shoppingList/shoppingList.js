@@ -14,7 +14,7 @@ export default function ShoppingList({ list, checked, icon, ingredientClickHand 
     for (i; i < list.length; i++) {
         const node = list[i];
         const id = node.id;
-        listItems.push(<Ingredient key={id} id={id} ingredientClickHand={ingredientClickHand} icon={icon} name={node.name} />);
+        listItems.push(<Ingredient key={id} id={id} ingredientClickHand={ingredientClickHand} icon={icon} name={node.text} />);
     }
 
     return (

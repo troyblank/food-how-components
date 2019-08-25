@@ -14,9 +14,9 @@ renderHtml(
     <form className={styles.form} >
       <Input label={'Add something'} id={'addIngredient'} />
     </form>
-    <GetShoppingList list={[{ name: 'stuff', id: 1234 }, { name: 'and', id: 1235 }]} ingredientClickHand={(id) => { print(`Ingredient clicked: ${id}`); }} />
+    <GetShoppingList list={[{ text: 'stuff', id: 1234 }, { text: 'and', id: 1235 }]} ingredientClickHand={(id) => { print(`Ingredient clicked: ${id}`); }} />
     <Button text={'Clear checked'} buttonClickHand={() => print('Button clicked.')} />
-    <GotShoppingList list={[{ name: 'things', id: 2223 }]} ingredientClickHand={(id) => { print(`Ingredient clicked: ${id}`); }} />
+    <GotShoppingList list={[{ text: 'things', id: 2223 }]} ingredientClickHand={(id) => { print(`Ingredient clicked: ${id}`); }} />
   </section>,
     '#shoppingList'
 );

@@ -10,8 +10,8 @@ import { IconX } from '../../components/icons';
 
 describe('Shopping List', () => {
     const chance = new Chance();
-    const listItem0 = { name: chance.word(), id: chance.natural() };
-    const listItem1 = { name: chance.word(), id: chance.natural() };
+    const listItem0 = { text: chance.word(), id: chance.natural() };
+    const listItem1 = { text: chance.word(), id: chance.natural() };
     const data = [listItem0, listItem1];
     const ingredientClickHand = sinon.spy();
 
@@ -20,8 +20,8 @@ describe('Shopping List', () => {
 
         assert.isTrue(wrapper.contains(
           <ul className={styles['shopping-list']}>
-            <Ingredient id={listItem0.id} ingredientClickHand={ingredientClickHand} icon={<IconX />} name={listItem0.name} />
-            <Ingredient id={listItem1.id} ingredientClickHand={ingredientClickHand} icon={<IconX />} name={listItem1.name} />
+            <Ingredient id={listItem0.id} ingredientClickHand={ingredientClickHand} icon={<IconX />} name={listItem0.text} />
+            <Ingredient id={listItem1.id} ingredientClickHand={ingredientClickHand} icon={<IconX />} name={listItem1.text} />
           </ul>
         ));
     });
